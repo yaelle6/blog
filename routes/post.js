@@ -12,8 +12,8 @@ postRoute.post('/add', (req, res) => {
 	const title = req.body.title
 	const text = req.body.text
 	// const image_url = req.body.image_url ? `, '${req.body.image_url}'` : ''
+	// const imageUrlConst = image_url ? ', image_url' : ''
 	const image_url = req.body.image_url
-	const imageUrlConst = image_url ? ', image_url' : ''
 
 	if (title && text) {
 		// const sql = `INSERT INTO blog.post (title, text ${imageUrlConst}) VALUES ('${title}', '${text}'${image_url});`;
