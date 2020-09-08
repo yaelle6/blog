@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import Post from './Post'
+import PostCard from './PostCard'
 
 export default function Posts () {
     const [posts, setPosts] = useState([])
@@ -16,7 +16,7 @@ export default function Posts () {
     return ( 
         <div>
             {
-                posts.map(post => <Post key={post.id} title={post.title} text={post.text} image={post.image_url} author={post.author} />)
+                posts.map(post =><PostCard key={post.id} post={post} />)
             }
         </div>
     )

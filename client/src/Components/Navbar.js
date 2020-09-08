@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import { AppBar, Toolbar, Typography, Button, makeStyles } from '@material-ui/core';
+import { AppBar, Toolbar, Button, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
+
     root: {
       flexGrow: 1,
       display: 'flex',
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 const Navbar = () =>{
     const classes = useStyles();
     return(
-        <AppBar id='navbar'>
+        <AppBar id='navbar' >
             <Toolbar className={classes.root}>
                 <Button className={classes.button}>
                     <Link to={'/'} className={classes.title}>Home Page</Link>

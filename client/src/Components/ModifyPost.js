@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Input, TextField, makeStyles } from '@material-ui/core';
+import { TextField,  FormControl, makeStyles, TextareaAutosize, Button } from '@material-ui/core';
 import axios from 'axios';
 
 const ModifyPost = () => {
@@ -20,14 +20,12 @@ const ModifyPost = () => {
   }
 
   return (
-      <Form>
-        <Form.Group widths='equal'>
-          <Input fluid label='Title' placeholder='Title' onChange={updateFields} name='title'/>
-        </Form.Group>
-        <Input fluid label='Image' placeholder='Image' onChange={updateFields} name='image_url'/>
-        <Form.TextArea label='Text' placeholder='Enter your text' onChange={updateFields} name='text'/>
-        <Form.Button onClick={ handleSubmit }>Submit</Form.Button>
-      </Form>
+      <FormControl>
+        <TextField label='Title' placeholder='Title' onChange={updateFields} name='title'/>
+        <TextField label='Image' placeholder='Image' onChange={updateFields} name='image_url'/>
+        <TextField label='Text' placeholder='Enter your text' onChange={updateFields} name='text' multiline/>
+        <Button onClick={ handleSubmit }>Submit</Button>
+      </FormControl>
     )
 
 }
