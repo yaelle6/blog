@@ -21,13 +21,9 @@ const useStyles = makeStyles({
 });
 
 const PostCard = ({ post }) => {
-  const passProps = (post) => {
-    console.log('inside passprops', post);
-    return <Post post={post}/>
-  }
     const classes = useStyles();
     return (
-        <Card className={classes.root}  onClick={passProps(post)}>
+        <Card className={classes.root}>
           <Link to={`/posts/${post.id}`}>
             <CardContent >
             {/* { (post.image !== "null" && post.image !== "undefined" && post.image !== undefined && post.image !== null ) ? <CardMedia image={post.image} title={post.image}/> : ''} */}
